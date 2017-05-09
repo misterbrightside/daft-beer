@@ -1,0 +1,38 @@
+.SearchResult {
+  display: grid;
+  margin: 1em;
+  grid-gap: .5em;
+  box-shadow: 0px 1px 5px 1px grey;
+  border-radius: 10px;
+  padding:  20px;
+  background: white;
+
+  .SearchResultImage {
+    grid-area: image;
+    object-fit: contain;
+    max-height: 200px;
+  }
+
+  .SearchResultHeader {
+    grid-area: header;
+    text-align: center;
+  }
+
+  .SearchResultDescription {
+    grid-area: description;
+    margin: auto 0;
+  }
+}
+
+
+.SearchResult.large {
+  grid-template-columns: 20% auto;
+  grid-template-areas: "header header"
+                       "image description";
+}
+
+.SearchResult.small {
+  grid-template-columns: 10% auto;
+  grid-template-areas: "image header"
+                       "image description";
+}

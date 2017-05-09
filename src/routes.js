@@ -1,15 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import BeerSearch from './containers/BeerSearch';
+import RandomBeer from './containers/RandomBeer';
+import App from './containers/App';
+import BeerPage from './containers/BeerPage';
 
-const Page = ({ children }) => (<div>{children}</div>);
-const HomePage = () => (<div>Hello boots the house down</div>);
-const BeersPage = () => <div>beers beers beers!</div>;
+const HomePage = () => (
+  <div>
+    <RandomBeer />
+    <BeerSearch />
+  </div>
+);
 
 const Routes = () => (
-  <Page>
-    <Route exact path="/" component={HomePage} />
-    <Route path={'/beers'} component={BeersPage} />
-  </Page>
+  <App>
+    <Route exact path={'/'} component={HomePage} />
+    <Route path={'/search'} component={BeerSearch} />
+    <Route path={'/beers/:id'} component={BeerPage} />
+  </App>
 );
 
 export default Routes;
