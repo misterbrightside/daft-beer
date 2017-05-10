@@ -3,7 +3,6 @@ import { polyfill } from 'es6-promise';
 import { Server } from 'http';
 import Express from 'express';
 import cors from 'cors';
-import Renderer from './renderer';
 import {
   getRandomBeer,
   searchAPI,
