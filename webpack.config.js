@@ -49,12 +49,6 @@ module.exports = {
       }
     ]
   },
-  externals: {
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    lodash: 'lodash',
-    'react-router-dom': 'react-router-dom'
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
