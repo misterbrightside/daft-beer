@@ -16,4 +16,4 @@ Tested on macOS Sierra with Chrome 57. Built with react and redux.
 - Server side rendering to enable progressive form for search box and URLs not breaking that isn't the root url.
 - Unit tests!
 - Loading indicators when fetching beer listings.
-- Advanced ordering with something like 
+- Advanced ordering with something like beer %.
